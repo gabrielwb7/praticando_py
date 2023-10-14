@@ -1,9 +1,11 @@
+def calculo_de_imc(peso, altura):
+    return peso / altura ** 2
+
 class pessoa: 
     nome = 'Gabriel'
     peso = 115
     altura = 1.83
+    imc = calculo_de_imc(peso, altura)
 
-imc = pessoa.peso / pessoa.altura ** 2
-
-print(pessoa.nome, 'tem', pessoa.altura, 'de altura,')
-print('pesa', pessoa.peso, 'e seu IMC é:', imc)
+print(f'{pessoa.nome} tem {pessoa.altura:.2f} de altura,')
+print(f'pesa {pessoa.peso} e seu IMC é {pessoa.imc:.2f}')
