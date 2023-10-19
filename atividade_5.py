@@ -21,19 +21,22 @@ Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
 
 hora_str = input('Digite a hora: ')
+texto_saudacao = None
 
 if hora_str.isdecimal():
     hora_int = int(hora_str)
     if (hora_int >= 0 and hora_int <= 11):
-        print('Bom dia!')
+        texto_saudacao = 'Bom dia!'
     elif (hora_int <= 17):
-        print('Boa tarde')
+        texto_saudacao = 'Boa tarde'
     elif (hora_int <= 23):
-        print('Boa noite')
+        texto_saudacao = 'Boa noite'
     else:
         print('Hora invalida')
 else:
     print('Você não digitou um numero!!')
+
+print(texto_saudacao)
 
 
 """
