@@ -27,9 +27,9 @@ while True:
         resultado = primeiro_numero + segundo_numero
     elif operacao == OPERACOES[1]:
         resultado = primeiro_numero - segundo_numero
-    elif operacao == OPERACOES[3]:
+    elif operacao == OPERACOES[2]:
         resultado = primeiro_numero * segundo_numero
-    else:
+    elif operacao == OPERACOES[3]:
         resultado = primeiro_numero / segundo_numero
     
     print(f'O resultado da {primeiro_numero}{operacao}{segundo_numero} é: {resultado}')
