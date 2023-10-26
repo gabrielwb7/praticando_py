@@ -30,7 +30,7 @@ while True:
         indice_item_excluido = validaNumero(input('Digite o indice que se encontra o item que será excluido: '))
         try:
             lista_de_compras.pop(indice_item_excluido)
-        except:
+        except IndexError:
             print('Nao foi possivel deletar esse item')
     else:
         for indice, item in enumerate(lista_de_compras):
