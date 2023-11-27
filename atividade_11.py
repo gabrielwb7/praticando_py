@@ -16,7 +16,7 @@ def calculo_primeiro_digito(numeros):
     
     primeiro_digito = (soma_total * 10) % 11
 
-    return primeiro_digito if primeiro_digito < 9 else 0
+    return primeiro_digito if primeiro_digito <= 9 else 0
 
 primeiro_digito = calculo_primeiro_digito(cpf_somente_numeros)
 
