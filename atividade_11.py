@@ -5,12 +5,12 @@ for caractere in cpf:
     if caractere.isdigit(): 
         cpf_somente_numeros.append(int(caractere))
 
-def calculo_primeiro_digito(numeros): 
-    contador = 10
+def calculo_digitos_finais_cpf(numeros_cpf, qtd_indices): 
+    contador = qtd_indices
     soma_total = 0
     index = 0
     while contador > 1:
-        soma_total += numeros[index] * contador
+        soma_total += numeros_cpf[index] * contador
         contador-=1
         index+=1
     
@@ -18,7 +18,9 @@ def calculo_primeiro_digito(numeros):
 
     return primeiro_digito if primeiro_digito <= 9 else 0
 
-primeiro_digito = calculo_primeiro_digito(cpf_somente_numeros)
+primeiro_digito = calculo_digitos_finais_cpf(cpf_somente_numeros,10)
+segundo_digito = calculo_digitos_finais_cpf(cpf_somente_numeros,11)
 
-print(primeiro_digito)
+print(f'O primeiro digito: {primeiro_digito}')
+print(f'O segundo digito: {segundo_digito}')
 
